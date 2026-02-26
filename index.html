@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#FFFFFF"
+        class="menu"
+      >
+        <path
+          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+        />
+      </svg>
+
+      <ul id="navlist">
+        <li><a href="#education" class="hover">Education</a></li>
+        <li><a href="#skills" class="hover">Skills</a></li>
+        <li><a href="#experience" class="hover">Experience</a></li>
+        <li><a href="#about" class="hover">About</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- INTRO -->
+      <div id="intro">
+        <div id="intro-left">
+          <div>
+            <h1>
+              <span class="opacity-full">Offering</span> you the developer
+            </h1>
+            <h2><span class="opacity-full">Bikram</span> Poudel</h2>
+          </div>
+        </div>
+        <div id="intro-right">
+          <div id="intro-image"></div>
+          <p style="padding: 15px">
+            <i
+              ><b>Skills:</b> Frontend Developer, Unity Game Developer, C, C#,
+              Python</i
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="education" id="education">
+        <h1 class="title">Education</h1>
+        <div class="neb education-hover">
+          <h1>+2 Level</h1>
+          <p>Faculty: <b>Management</b></p>
+          <p>GPA: <b>3.96</b></p>
+          <p>
+            I chose management stream in +2. I achieved 3.96 GPA in board exam.
+            3.96 was the highest GPA in Nepal.
+          </p>
+        </div>
+        <div class="bachelor education-hover">
+          <h1>Bachelor Level</h1>
+          <p>
+            Course: Bachelor of Computer System and Information Technology
+            <b>(BCSIT)</b>
+          </p>
+          <p>Status: <b id="running">Running</b></p>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="skills" id="skills">
+        <h1 class="title">Skills</h1>
+        <div class="skills-container">
+          <div class="skill frontend-skill education-hover">
+            <h2>Frontend Development</h2>
+            <p>
+              I have experience in frontend development using
+              <b>HTML, CSS, and JavaScript</b>. I have built several responsive
+              websites and web applications.
+            </p>
+          </div>
+
+          <div class="skill education-hover">
+            <h2>Unity Game Development</h2>
+            <p>
+              Proficient in Unity game development and created various games
+              using C#.
+            </p>
+          </div>
+
+          <div class="skill education-hover skill-programming">
+            <h2>Programming Languages</h2>
+            <ul class="skill-list">
+              <li>C</li>
+              <li>C#</li>
+              <li>Python</li>
+            </ul>
+            <p>
+              Used for game development, web development, and problem solving.
+            </p>
+          </div>
+
+          <div class="skill education-hover" id="supporting-skills">
+            <h2>Supporting Skills</h2>
+            <ul class="skill-list">
+              <li>Graphic Designing (Above Basic)</li>
+              <li>Photo / Thumbnail Editing (Intermediate)</li>
+              <li>Video Editing (Intermediate)</li>
+              <li>UI/UX Understanding</li>
+              <li>Basic SEO Knowledge</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERSONAL EXPERIENCE -->
+      <section class="experience" id="experience">
+        <div class="title">
+          <h1>Personal Experience</h1>
+        </div>
+
+        <div class="experience-grid">
+          <div class="experience-item experience-hover education-hover">
+            <h1>Portfolio Projects</h1>
+            <p>
+              Built multiple personal portfolio websites to experiment with
+              layout, design, and responsive CSS.
+            </p>
+          </div>
+
+          <div class="experience-item experience-hover website-clones education-hover">
+            <h1>Website Clones</h1>
+            <p>
+              Created copies of popular websites to practice HTML, CSS, and
+              JavaScript skills.
+            </p>
+          </div>
+
+          <div class="experience-item experience-hover small-games education-hover">
+            <h1>Small Games</h1>
+            <p>
+              Developed small games in Unity to learn game mechanics,
+              physics, and AI programming.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+<footer id="about">
+  <div class="footer-container">
+    <h1 class="title">Connect with me:</h1>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/bikram-poudel-248531373/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/BikramPoudel123" target="_blank">GitHub</a>
+    </div>
+    <p>&copy; 2026 Bikram Poudel</p>
+  </div>
+</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

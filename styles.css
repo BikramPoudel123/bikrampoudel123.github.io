@@ -1,0 +1,504 @@
+/* =========================
+   GLOBAL STYLES / RESET
+========================= */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  list-style: inside;
+}
+
+body {
+  background-color: rgb(23, 23, 33);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+nav {
+  padding: 10px 0 10px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.5),
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.5)
+  );
+  background-color: white;
+}
+
+#navlist {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: clamp(16px, 3vw, 30px);
+}
+
+#navlist li {
+  list-style-type: none;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+#intro {
+  width: 100%;
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 40px 20px rgba(0, 0, 255, 0.3);
+}
+
+/* Left Side */
+#intro-left {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.3)
+  );
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-right: 1px solid white;
+}
+
+#intro-left h1 {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+#intro-left h2 {
+  font-size: 50px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#intro-left h2 span {
+  background-color: rgba(0, 0, 255, 0.201);
+  border-radius: 5px;
+}
+
+.opacity-full {
+  color: white;
+  opacity: 100%;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Right Side */
+#intro-right {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.3)
+  );
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#intro-right #intro-image {
+  height: 300px;
+  width: 300px;
+  background: url(bikram.jpeg);
+  border-radius: 50%;
+  background-size: cover;
+  background-position-y: -100px;
+  margin: 20px;
+}
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+.education {
+  width: 100%;
+  margin: 70px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 40px 20px rgba(0, 0, 255, 0.3);
+  align-items: stretch;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  border: 1px solid blue;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.5),
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.5)
+  );
+  background-color: white;
+  color: black;
+}
+
+/* NEB */
+.neb {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.3)
+  );
+  border-right: 1px solid white;
+  width: 50%;
+  padding: 20px;
+}
+
+.neb h1,
+.neb p {
+  margin: 10px;
+}
+
+/* Bachelor */
+.bachelor {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.3)
+  );
+  width: 50%;
+  padding: 20px;
+  animation: blinkinganim 0.5s infinite;
+}
+
+.bachelor h1,
+.bachelor p {
+  margin: 10px;
+}
+
+/* Hover Effects */
+.education-hover {
+  transition: all 0.3s ease;
+}
+
+.education-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 255, 0.6);
+  background-color: blue;
+  border: 1px solid white;
+  padding: 25px;
+}
+
+.neb,
+.bachelor {
+  transition: all 0.3s ease;
+}
+
+.bachelor:hover {
+  animation: bachelorHover 0.1s infinite;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes blinkinganim {
+  0% {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 255, 0.1),
+      rgba(0, 0, 255, 0.5)
+    );
+  }
+  50% {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 255, 0.1),
+      rgba(0, 0, 255, 0.25)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 255, 0.1),
+      rgba(0, 0, 255, 0.5)
+    );
+  }
+}
+
+@keyframes bachelorHover {
+  0% {
+    background-color: rgba(0, 0, 255, 0.95);
+  }
+  50% {
+    background-color: rgba(0, 0, 255, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 255, 0.95);
+  }
+}
+
+#running {
+  animation: runningAnim 0.5s infinite;
+}
+
+@keyframes runningAnim {
+  0% {
+    color: red;
+  }
+  16.66% {
+    color: orange;
+  }
+  33.33% {
+    color: yellow;
+  }
+  50% {
+    color: green;
+  }
+  66.66% {
+    color: blue;
+  }
+  83.33% {
+    color: indigo;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+.skills {
+  box-shadow: 0 0 40px 20px rgba(0, 0, 255, 0.3);
+  margin: 70px 0 50px;
+}
+
+#skills-title {
+  width: 100%;
+  text-align: center;
+  border: 1px solid blue;
+  margin-bottom: 10px;
+}
+
+.skills-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skills-container h2 {
+  margin-bottom: 10px;
+}
+
+.skill {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.3)
+  );
+  padding: 20px;
+  min-height: 180px;
+}
+.skill-programming {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.3)
+  );
+  border-right: 1px solid white;
+}
+
+.frontend-skill {
+  border-right: 1px solid white;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.3)
+  );
+}
+
+/* =========================
+   REUSABLE HOVER CLASS
+========================= */
+.hover {
+  transition: all 0.3s;
+}
+
+.hover:hover {
+  background-color: rgba(0, 0, 255, 0.39);
+  border-radius: 5px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  #intro-left {
+    width: 100%;
+    font-size: 10px;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 255, 0.1),
+      rgba(0, 0, 255, 0.3)
+    );
+  }
+
+  #intro-left h2 {
+    font-size: 30px;
+  }
+
+  #intro-right {
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 255, 0.1),
+      rgba(0, 0, 255, 0.3)
+    );
+  }
+
+  .neb,
+  .bachelor {
+    width: 100%;
+  }
+
+  #navlist {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(23, 23, 30);
+    width: 100%;
+    padding: 20px 0;
+  }
+  #navlist li a{
+    color: white;
+  }
+
+  #navlist li {
+    margin: 10px;
+  }
+
+  .menu {
+    display: block;
+    margin-left: 20px;
+  }
+
+  #navlist.active {
+    display: flex;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* Personal Experience Section */
+/* Personal Experience Section */
+/* Personal Experience Section */
+
+
+
+.experience {
+  width: 100%;
+  margin: 70px 0 50px;
+  box-shadow: 0 0 40px 20px rgba(0, 0, 255, 0.3);
+}
+
+/* Title stays at top */
+
+
+/* Grid wrapper */
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 columns */
+  grid-template-rows: auto auto;   /* 2 rows */
+  width: 100%;
+}
+
+/* Individual items */
+.experience-item {
+  background: linear-gradient(to left, rgba(0,0,255,0.1), rgba(0,0,255,0.3));
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+/* Grid positioning */
+.experience-item:nth-child(1) { /* Portfolio Projects */
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.website-clones { /* Website Clones takes full height */
+  grid-column: 2;
+  grid-row: 1 / 3;
+  background: linear-gradient(to right, rgba(0,0,255,0.1), rgba(0,0,255,0.3));
+  border-left: 1px solid white;
+}
+
+.experience-item:nth-child(3) { /* Small Games */
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Remove gaps & borders */
+.experience-grid {
+  gap: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-grid {
+    display: block;
+  }
+  .experience-item {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FOOTER SECTION
+========================= */
+#about {
+  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,255,0.5), rgba(0,0,255,0.1), rgba(0,0,255,0.5));
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 50px;
+  box-shadow: 0 -10px 30px rgba(0,0,255,0.3);
+}
+
+#about .footer-container {
+  
+  margin: 0 auto;
+}
+
+#about p {
+  margin: 10px 0;
+}
+
+#about .social-links {
+  margin: 10px 0 20px;
+}
+
+#about .social-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: all 0.3s;
+}
+
+#about .social-links a:hover {
+  color: rgb(0, 150, 255);
+  transform: scale(1.1);
+}
